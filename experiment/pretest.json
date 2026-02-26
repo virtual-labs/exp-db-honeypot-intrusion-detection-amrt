@@ -2,37 +2,105 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the main objective of implementing a database honeypot in this experiment?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To replace the main database system",
+        "b": "To detect and monitor unauthorized access attempts",
+        "c": "To increase database storage capacity",
+        "d": "To improve query execution speed"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. The honeypot does not replace the production database.",
+        "b": "Correct. The honeypot is implemented to detect and monitor unauthorized access attempts.",
+        "c": "Incorrect. Storage capacity is not the purpose of a honeypot.",
+        "d": "Incorrect. Performance improvement is not the objective."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of creating decoy tables such as `users_decoy` and `credit_cards_decoy`?",
+      "answers": {
+        "a": "To store actual user data",
+        "b": "To test database backup systems",
+        "c": "To attract attackers and detect suspicious activity",
+        "d": "To provide public data access"
+      },
+      "explanations": {
+        "a": "Incorrect. Decoy tables do not store real sensitive data.",
+        "b": "Incorrect. Backup testing is not the purpose here.",
+        "c": "Correct. Decoy tables act as traps to detect and log unauthorized interactions.",
+        "d": "Incorrect. Honeypots are controlled systems, not public databases."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following SQL operations on a decoy table is considered suspicious?",
+      "answers": {
+        "a": "SELECT",
+        "b": "UPDATE",
+        "c": "DROP",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "Incorrect. SELECT on a decoy table is suspicious but not the only one.",
+        "b": "Incorrect. UPDATE on a decoy table is suspicious but not the only one.",
+        "c": "Incorrect. DROP is suspicious but not the only one.",
+        "d": "Correct. Any interaction such as SELECT, UPDATE, DROP, INSERT, DELETE, or ALTER is considered suspicious."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What type of information is stored when suspicious activity is detected?",
+      "answers": {
+        "a": "Timestamp and query details",
+        "b": "Only the database size",
+        "c": "Only the server name",
+        "d": "Only the user password"
+      },
+      "explanations": {
+        "a": "Correct. The system logs timestamp, action performed, and other relevant details.",
+        "b": "Incorrect. Database size is not relevant to attack detection.",
+        "c": "Incorrect. Server name alone is insufficient.",
+        "d": "Incorrect. Password-only logging is not secure or sufficient."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which security concept is demonstrated by the use of a database honeypot?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Load balancing",
+        "b": "Deception-based defense",
+        "c": "Data compression",
+        "d": "Network routing"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Load balancing distributes traffic.",
+        "b": "Correct. A honeypot works on the principle of deception-based defense.",
+        "c": "Incorrect. Data compression reduces storage size.",
+        "d": "Incorrect. Network routing directs traffic paths."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is the honeypot database not used as a production system?",
+      "answers": {
+        "a": "Because it contains fake sensitive data",
+        "b": "Because it cannot store data",
+        "c": "Because it does not support SQL",
+        "d": "Because it is publicly accessible"
+      },
+      "explanations": {
+        "a": "Correct. The honeypot contains fabricated data and is meant only for detection and monitoring.",
+        "b": "Incorrect. It can store data but is not meant for production use.",
+        "c": "Incorrect. It supports SQL operations.",
+        "d": "Incorrect. It is a controlled environment, not public."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
