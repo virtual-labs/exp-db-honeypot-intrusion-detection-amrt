@@ -1,4 +1,4 @@
-### Database Honeypot: Theory and Concept
+
 
 A **honeypot** is a security mechanism designed to detect, deflect, and analyze unauthorized access attempts by intentionally deploying a controlled and monitored decoy system that appears to contain valuable resources.
 
