@@ -1,1 +1,1 @@
-To design and implement a database honeypot system that detects unauthorized access attempts by deploying decoy sensitive tables and monitoring suspicious interactions, thereby demonstrating the effectiveness of deception-based security mechanisms in database systems.
+To design and implement a database honeypot system that detects unauthorized access attempts by creating decoy sensitive tables and monitoring suspicious database interactions, thereby demonstrating the effectiveness of deception-based security mechanisms in database systems.
