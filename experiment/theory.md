@@ -1,6 +1,6 @@
+### Database Honeypot: Theory and Concept
 
-
-A **honeypot** is a security mechanism designed to detect, deflect, and analyze unauthorized access attempts by intentionally deploying a controlled and monitored decoy system that appears to contain valuable resources.
+A **honeypot** is a security mechanism designed to detect, observe, and analyze unauthorized access attempts by intentionally deploying a controlled and monitored decoy system that appears to contain valuable resources.
 
 In the context of **database security**, a **honeypot database** is created as a decoy environment that mimics a legitimate database system and contains fabricated sensitive data such as:
 
@@ -36,7 +36,7 @@ In the honeypot database, fake sensitive tables are created such as:
 - `banking_records_decoy`
 - `employee_payroll_decoy`
 
-These tables are intentionally isolated and are **not accessed during normal system operations**.
+These tables are intentionally isolated and are **not accessed during normal system operations**. It is essential to emphasize that **no legitimate user or application should ever need access to honeypot data**. Any interaction with these decoy tables is inherently suspicious.
 
 **Any interaction with these decoy tables** — including:
 
@@ -64,7 +64,7 @@ In this experiment, **attacker activity can be monitored** using the following m
 
 #### Alerting and Logging
 
-When an unauthorized user interacts with the honeypot database, the system performs the following actions:
+When any user interacts with the honeypot database, the system performs the following actions:
 
 1. Generates **real-time alerts**
 2. Stores detailed logs containing:
@@ -92,4 +92,4 @@ The collected information is analyzed to:
 - It **complements (but does not replace)** traditional security mechanisms
 - It acts as an **additional layer of defense** through controlled deception and activity monitoring
 
-In summary, the honeypot database in this experiment functions primarily as a **detection and monitoring mechanism rather than a preventive control**. By capturing and analyzing unauthorized interactions with decoy database tables, the system helps security administrators understand attacker behavior and strengthen the overall security posture of the database environment.
+In summary, the honeypot database in this experiment functions primarily as a **detection and monitoring mechanism**. By capturing and analyzing any interactions with decoy database tables, the system helps security administrators understand attacker behavior and strengthen the overall security posture of the database environment. Since no legitimate user or application should ever interact with this data, any activity recorded is a clear indicator of a security incident.
